@@ -1,0 +1,611 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nihan Ali VP — Professional Portfolio</title>
+  <meta name="description" content="Nihan Ali VP — Full-Stack Developer. Portfolio showcasing projects, skills, experience, blog and contact." />
+  <!-- Tailwind CDN - for quick prototype. For production, install via npm and build. -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Tailwind config extension
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#4f46e5',
+            accent: '#06b6d4'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Simple glass card backdrop blur fallback */
+    .glass { background: rgba(255,255,255,0.06); backdrop-filter: blur(6px); }
+    .glass-dark { background: rgba(0,0,0,0.35); backdrop-filter: blur(6px); }
+  </style>
+</head>
+<body class="bg-gradient-to-b from-white to-slate-50 text-slate-900 antialiased dark:from-slate-900 dark:to-slate-800 dark:text-slate-100">
+  <!-- Page wrapper -->
+  <div class="min-h-screen flex flex-col">
+    <!-- NAV -->
+    <header class="sticky top-0 z-40 backdrop-blur glass/90 dark:glass-dark border-b border-slate-200 dark:border-slate-700">
+      <div class="max-w-6xl mx-auto px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <a href="#home" class="flex items-center gap-3">
+            <!-- Placeholder logo -->
+            <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-primary to-accent flex items-center justify-center text-white font-bold">NA</div>
+            <div>
+              <div class="text-sm font-semibold">Nihan Ali VP</div>
+              <div class="text-xs text-slate-500 dark:text-slate-400">Full‑Stack Developer • IoT • Embedded</div>
+            </div>
+          </a>
+
+          <nav class="hidden md:flex items-center gap-6 text-sm">
+            <a href="#about" class="hover:underline">About</a>
+            <a href="#skills" class="hover:underline">Skills</a>
+            <a href="#projects" class="hover:underline">Projects</a>
+            <a href="#experience" class="hover:underline">Experience</a>
+            <a href="#testimonials" class="hover:underline">Testimonials</a>
+            <a href="#contact" class="hover:underline">Contact</a>
+          </nav>
+
+          <div class="flex items-center gap-3">
+            <a href="#contact" class="hidden md:inline-block px-4 py-2 rounded-md bg-primary text-white text-sm shadow hover:shadow-lg">Hire Me</a>
+            <button id="themeToggle" aria-label="Toggle theme" class="p-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-700">
+              <!-- simple sun/moon -->
+              <svg id="themeIcon" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v2m0 14v2m9-9h-2M5 12H3m15.364-6.364l-1.414 1.414M7.05 16.95l-1.414 1.414M16.95 16.95l1.414 1.414M7.05 7.05L5.636 5.636" />
+              </svg>
+            </button>
+            <button id="mobileMenuBtn" class="md:hidden p-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Mobile menu -->
+      <div id="mobileMenu" class="hidden md:hidden border-t border-slate-200 dark:border-slate-700">
+        <div class="px-6 py-4 flex flex-col gap-3">
+          <a href="#about" class="py-2">About</a>
+          <a href="#skills" class="py-2">Skills</a>
+          <a href="#projects" class="py-2">Projects</a>
+          <a href="#experience" class="py-2">Experience</a>
+          <a href="#testimonials" class="py-2">Testimonials</a>
+          <a href="#contact" class="py-2">Contact</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <main id="home" class="flex-1">
+      <section class="max-w-6xl mx-auto px-6 lg:px-8 py-12 lg:py-20">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-7">
+            <div class="space-y-6">
+              <p class="inline-flex items-center gap-3 bg-gradient-to-r from-primary/10 to-accent/10 text-primary px-3 py-1 rounded-full text-sm font-medium">Available for freelance & full-time</p>
+              <h1 class="text-4xl lg:text-6xl leading-tight font-extrabold">Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Nihan Ali VP</span><br class="hidden md:block"/> — I build delightful web & mobile apps.</h1>
+              <p class="text-lg text-slate-600 dark:text-slate-300 max-w-2xl">I design and develop production-ready applications using Flutter, React, Node.js and embedded systems. I blend product thinking with strong engineering to deliver fast, accessible and maintainable software.</p>
+
+              <div class="flex flex-wrap items-center gap-4">
+                <a href="#projects" class="px-5 py-3 rounded-md bg-accent text-white font-medium shadow hover:shadow-lg">See my work</a>
+                <a href="#contact" class="px-5 py-3 rounded-md border border-slate-200 dark:border-slate-700">Contact me</a>
+                <a href="/resume.pdf" class="px-4 py-2 text-sm rounded-md hover:underline">Download Resume</a>
+              </div>
+
+              <div class="mt-6">
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs text-slate-600 dark:text-slate-300">
+                  <div class="glass p-3 rounded-md text-center">
+                    <div class="text-2xl font-bold">7+</div>
+                    <div class="mt-1">Years experience</div>
+                  </div>
+                  <div class="glass p-3 rounded-md text-center">
+                    <div class="text-2xl font-bold">50+</div>
+                    <div class="mt-1">Projects shipped</div>
+                  </div>
+                  <div class="glass p-3 rounded-md text-center">
+                    <div class="text-2xl font-bold">20k+</div>
+                    <div class="mt-1">Hours coded</div>
+                  </div>
+                  <div class="glass p-3 rounded-md text-center">
+                    <div class="text-2xl font-bold">Remote</div>
+                    <div class="mt-1">Available</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5">
+            <!-- Profile card -->
+            <div class="glass p-6 rounded-2xl shadow-lg border border-slate-100 dark:border-slate-800">
+              <div class="flex items-center gap-4">
+                <img src="https://via.placeholder.com/120" alt="Profile" class="w-24 h-24 rounded-full object-cover border-4 border-white dark:border-slate-900 shadow" />
+                <div>
+                  <div class="font-semibold text-lg">Nihan Ali VP</div>
+                  <div class="text-sm text-slate-500 dark:text-slate-300">VP — Full‑Stack Developer</div>
+                  <div class="mt-3 text-sm">I build user-first products with a focus on performance, delightful UX and robust architecture.</div>
+                </div>
+              </div>
+
+              <div class="mt-5 grid grid-cols-2 gap-3 text-sm text-slate-600 dark:text-slate-300">
+                <div class="p-3 rounded-md border border-slate-100 dark:border-slate-800">
+                  <div class="text-xs uppercase text-slate-400">Location</div>
+                  <div class="font-medium">India</div>
+                </div>
+                <div class="p-3 rounded-md border border-slate-100 dark:border-slate-800">
+                  <div class="text-xs uppercase text-slate-400">Email</div>
+                  <div class="font-medium">nihan@example.com</div>
+                </div>
+                <div class="p-3 rounded-md border border-slate-100 dark:border-slate-800">
+                  <div class="text-xs uppercase text-slate-400">Works with</div>
+                  <div class="font-medium">Startups & Enterprises</div>
+                </div>
+                <div class="p-3 rounded-md border border-slate-100 dark:border-slate-800">
+                  <div class="text-xs uppercase text-slate-400">Availability</div>
+                  <div class="font-medium">Immediate</div>
+                </div>
+              </div>
+
+              <div class="mt-5 flex gap-3">
+                <a aria-label="GitHub" href="#" class="p-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-700"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.744.083-.729.083-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.418-1.305.762-1.605-2.665-.305-5.467-1.332-5.467-5.93 0-1.31.468-2.38 1.236-3.22-.124-.303-.536-1.527.117-3.176 0 0 1.008-.322 3.301 1.23a11.52 11.52 0 013.003-.403c1.018.004 2.043.138 3.003.403 2.29-1.552 3.295-1.23 3.295-1.23.655 1.649.243 2.873.12 3.176.77.84 1.234 1.91 1.234 3.22 0 4.61-2.807 5.624-5.479 5.92.43.372.823 1.102.823 2.222v3.293c0 .319.218.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+                <a aria-label="LinkedIn" href="#" class="p-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-700"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5C1.11 6 0 4.881 0 3.5 0 2.121 1.11 1 2.5 1 3.87 1 4.98 2.12 4.98 3.5zM.5 8h4.98V24H.5zM8 8h4.78v2.21h.07c.67-1.27 2.3-2.6 4.74-2.6C22.7 7.6 24 10 24 14.13V24h-4.98v-8.2c0-1.95-.04-4.46-2.72-4.46-2.72 0-3.14 2.13-3.14 4.33V24H8z"/></svg></a>
+                <a aria-label="Twitter" href="#" class="p-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-700"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M24 4.557a9.83 9.83 0 01-2.828.775 4.932 4.932 0 002.165-2.724c-.951.564-2.005.974-3.127 1.195A4.92 4.92 0 0016.616 3c-2.717 0-4.92 2.203-4.92 4.92 0 .386.043.762.128 1.124C7.728 8.842 4.1 6.87 1.671 3.9a4.822 4.822 0 00-.666 2.475c0 1.708.87 3.213 2.188 4.099a4.904 4.904 0 01-2.228-.616c-.054 2.01 1.416 3.9 3.507 4.322a4.93 4.93 0 01-2.224.084c.626 1.956 2.444 3.379 4.6 3.42A9.867 9.867 0 010 19.54 13.94 13.94 0 007.548 22c9.142 0 14.307-7.721 13.995-14.646A9.936 9.936 0 0024 4.557z"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="max-w-6xl mx-auto px-6 lg:px-8 py-10">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+          <div class="lg:col-span-2">
+            <h2 class="text-2xl font-bold">About Me</h2>
+            <p class="mt-4 text-slate-600 dark:text-slate-300">I’m a product-minded full‑stack developer with a passion for building performant apps and reliable embedded systems. My background spans mobile apps (Flutter), web frontends (React/TypeScript), server-side APIs (Node.js, Python), and IoT/embedded firmware (C/C++). I love turning ambiguous problems into simple, delightful experiences.</p>
+
+            <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="p-4 rounded-lg border border-slate-100 dark:border-slate-800 glass">
+                <h3 class="font-semibold">What I do</h3>
+                <ul class="mt-3 list-disc list-inside text-sm text-slate-600 dark:text-slate-300">
+                  <li>Designing and shipping cross-platform apps with Flutter</li>
+                  <li>Building modern, accessible web apps using React & TypeScript</li>
+                  <li>Developing REST & GraphQL APIs with Node.js and Python</li>
+                  <li>Embedded systems & IoT — prototyping, PCB & firmware</li>
+                </ul>
+              </div>
+
+              <div class="p-4 rounded-lg border border-slate-100 dark:border-slate-800 glass">
+                <h3 class="font-semibold">How I work</h3>
+                <ul class="mt-3 list-disc list-inside text-sm text-slate-600 dark:text-slate-300">
+                  <li>User-first thinking: research, prototypes, iterate</li>
+                  <li>Test-driven & maintainable codebases</li>
+                  <li>CI/CD, automated tests, and code reviews</li>
+                  <li>Performance and accessibility best practices</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="mt-6">
+              <h3 class="font-semibold">Core strengths</h3>
+              <div class="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-slate-600 dark:text-slate-300">
+                <div class="p-3 rounded-md border border-slate-100 dark:border-slate-800">
+                  <div class="font-medium">Product Sense</div>
+                  <div class="text-xs">Translate user needs into clear product goals and measurable metrics.</div>
+                </div>
+                <div class="p-3 rounded-md border border-slate-100 dark:border-slate-800">
+                  <div class="font-medium">Architecture</div>
+                  <div class="text-xs">Design scalable systems with clean boundaries and observability.</div>
+                </div>
+                <div class="p-3 rounded-md border border-slate-100 dark:border-slate-800">
+                  <div class="font-medium">Collaboration</div>
+                  <div class="text-xs">Mentor engineers, run cross‑functional sprints and ship on time.</div>
+                </div>
+                <div class="p-3 rounded-md border border-slate-100 dark:border-slate-800">
+                  <div class="font-medium">Delivery</div>
+                  <div class="text-xs">Ship incremental value with strong testing and release practices.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <aside class="p-6 rounded-xl glass border border-slate-100 dark:border-slate-800">
+            <h4 class="font-semibold">Quick Facts</h4>
+            <dl class="mt-4 space-y-3 text-sm text-slate-600 dark:text-slate-300">
+              <div>
+                <dt class="text-xs text-slate-400">Location</dt>
+                <dd>India</dd>
+              </div>
+              <div>
+                <dt class="text-xs text-slate-400">Email</dt>
+                <dd>nihan@example.com</dd>
+              </div>
+              <div>
+                <dt class="text-xs text-slate-400">Phone</dt>
+                <dd>+91 9XXXXXXXXX</dd>
+              </div>
+              <div>
+                <dt class="text-xs text-slate-400">Open to</dt>
+                <dd>Remote / Hybrid roles, Contract work</dd>
+              </div>
+            </dl>
+
+            <div class="mt-4">
+              <a href="#contact" class="block text-center px-4 py-2 rounded-md bg-primary text-white">Get in touch</a>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills" class="max-w-6xl mx-auto px-6 lg:px-8 py-10">
+        <h2 class="text-2xl font-bold">Skills & Technologies</h2>
+        <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Tools and languages I use day-to-day — grouped for clarity.</p>
+
+        <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <!-- Programming Languages -->
+          <div class="p-4 rounded-lg border border-slate-100 dark:border-slate-800 glass">
+            <h3 class="font-semibold">Programming Languages</h3>
+            <ul class="mt-3 space-y-2 text-sm text-slate-600 dark:text-slate-300">
+              <li>Python • JavaScript • TypeScript</li>
+              <li>Dart • C • C++ • C#</li>
+              <li>Kotlin • PHP • HTML5 • CSS3</li>
+            </ul>
+          </div>
+
+          <!-- Frameworks & Libraries -->
+          <div class="p-4 rounded-lg border border-slate-100 dark:border-slate-800 glass">
+            <h3 class="font-semibold">Frameworks & Libraries</h3>
+            <ul class="mt-3 space-y-2 text-sm text-slate-600 dark:text-slate-300">
+              <li>Flutter • React • Node.js • Express</li>
+              <li>Next.js • Redux • Tailwind CSS • Bootstrap</li>
+              <li>TensorFlow (basics) • Electron</li>
+            </ul>
+          </div>
+
+          <!-- Cloud & Databases -->
+          <div class="p-4 rounded-lg border border-slate-100 dark:border-slate-800 glass">
+            <h3 class="font-semibold">Cloud & Databases</h3>
+            <ul class="mt-3 space-y-2 text-sm text-slate-600 dark:text-slate-300">
+              <li>Firebase • Firestore • Realtime DB</li>
+              <li>PostgreSQL • MySQL • Redis</li>
+              <li>AWS (EC2, S3, Lambda) • Docker</li>
+            </ul>
+          </div>
+
+          <!-- Tools & Processes -->
+          <div class="p-4 rounded-lg border border-slate-100 dark:border-slate-800 glass">
+            <h3 class="font-semibold">Tools & Processes</h3>
+            <ul class="mt-3 space-y-2 text-sm text-slate-600 dark:text-slate-300">
+              <li>Git • GitHub • CI/CD (GitHub Actions)</li>
+              <li>Figma • Postman • Jira • Agile</li>
+              <li>Unit testing • E2E testing • Observability</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Skill proficiency bars -->
+        <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div class="p-6 rounded-lg glass border border-slate-100 dark:border-slate-800">
+            <h4 class="font-semibold">Frontend</h4>
+            <p class="text-sm text-slate-600 dark:text-slate-300 mt-2">React, Next.js, TypeScript and Tailwind CSS. Emphasis on accessibility (a11y), performance and component libraries.</p>
+            <div class="mt-4 space-y-3">
+              <div>
+                <div class="flex justify-between text-xs"><span>React</span><span>90%</span></div>
+                <div class="w-full bg-slate-200 h-2 rounded-full mt-1 dark:bg-slate-700"><div class="h-2 rounded-full" style="width:90%; background: linear-gradient(90deg,#4f46e5,#06b6d4)"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between text-xs"><span>Tailwind CSS</span><span>95%</span></div>
+                <div class="w-full bg-slate-200 h-2 rounded-full mt-1 dark:bg-slate-700"><div class="h-2 rounded-full" style="width:95%; background: linear-gradient(90deg,#4f46e5,#06b6d4)"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between text-xs"><span>Flutter</span><span>88%</span></div>
+                <div class="w-full bg-slate-200 h-2 rounded-full mt-1 dark:bg-slate-700"><div class="h-2 rounded-full" style="width:88%; background: linear-gradient(90deg,#4f46e5,#06b6d4)"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 rounded-lg glass border border-slate-100 dark:border-slate-800">
+            <h4 class="font-semibold">Backend & DevOps</h4>
+            <p class="text-sm text-slate-600 dark:text-slate-300 mt-2">Node.js, Python, PostgreSQL, Redis, Docker and CI/CD pipelines for reliable deployments.</p>
+            <div class="mt-4 space-y-3">
+              <div>
+                <div class="flex justify-between text-xs"><span>Node.js</span><span>85%</span></div>
+                <div class="w-full bg-slate-200 h-2 rounded-full mt-1 dark:bg-slate-700"><div class="h-2 rounded-full" style="width:85%; background: linear-gradient(90deg,#4f46e5,#06b6d4)"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between text-xs"><span>Databases</span><span>80%</span></div>
+                <div class="w-full bg-slate-200 h-2 rounded-full mt-1 dark:bg-slate-700"><div class="h-2 rounded-full" style="width:80%; background: linear-gradient(90deg,#4f46e5,#06b6d4)"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between text-xs"><span>Docker & CI</span><span>75%</span></div>
+                <div class="w-full bg-slate-200 h-2 rounded-full mt-1 dark:bg-slate-700"><div class="h-2 rounded-full" style="width:75%; background: linear-gradient(90deg,#4f46e5,#06b6d4)"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects" class="max-w-6xl mx-auto px-6 lg:px-8 py-10">
+        <div class="flex items-center justify-between">
+          <h2 class="text-2xl font-bold">Selected Projects</h2>
+          <a href="#" class="text-sm underline">See all projects</a>
+        </div>
+
+        <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Project card (repeatable) -->
+          <article class="p-6 rounded-xl border border-slate-100 dark:border-slate-800 glass shadow hover:shadow-lg transition">
+            <div class="flex items-start gap-4">
+              <img src="https://via.placeholder.com/120x80" alt="Project screenshot" class="w-28 h-20 rounded-md object-cover shadow-sm" />
+              <div>
+                <h3 class="font-semibold text-lg">Smart Home Dashboard</h3>
+                <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">A cross-platform Flutter app connected to custom IoT firmware. Real-time device control, schedules and voice commands.</p>
+                <div class="mt-3 text-xs text-slate-500 dark:text-slate-400">Tech: Flutter • Firebase • MQTT • ESP32</div>
+
+                <div class="mt-4 flex gap-3">
+                  <a href="#" class="px-3 py-2 rounded-md border text-sm">Case study</a>
+                  <a href="#" class="px-3 py-2 rounded-md bg-primary text-white text-sm">Live</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="p-6 rounded-xl border border-slate-100 dark:border-slate-800 glass shadow hover:shadow-lg transition">
+            <div class="flex items-start gap-4">
+              <img src="https://via.placeholder.com/120x80" alt="Project screenshot" class="w-28 h-20 rounded-md object-cover shadow-sm" />
+              <div>
+                <h3 class="font-semibold text-lg">E‑commerce Admin Dashboard</h3>
+                <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">A React + TypeScript admin panel for inventory & billing with CSV export and role-based access control.</p>
+                <div class="mt-3 text-xs text-slate-500 dark:text-slate-400">Tech: React • TypeScript • Node.js • PostgreSQL</div>
+
+                <div class="mt-4 flex gap-3">
+                  <a href="#" class="px-3 py-2 rounded-md border text-sm">Case study</a>
+                  <a href="#" class="px-3 py-2 rounded-md bg-primary text-white text-sm">Repo</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="p-6 rounded-xl border border-slate-100 dark:border-slate-800 glass shadow hover:shadow-lg transition">
+            <div class="flex items-start gap-4">
+              <img src="https://via.placeholder.com/120x80" alt="Project screenshot" class="w-28 h-20 rounded-md object-cover shadow-sm" />
+              <div>
+                <h3 class="font-semibold text-lg">Workshop Management System</h3>
+                <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">Full stack system for billing, stock, warranties and payroll. Built with Flutter web + Firestore.</p>
+                <div class="mt-3 text-xs text-slate-500 dark:text-slate-400">Tech: Flutter Web • Firestore • Cloud Functions</div>
+
+                <div class="mt-4 flex gap-3">
+                  <a href="#" class="px-3 py-2 rounded-md border text-sm">Case study</a>
+                  <a href="#" class="px-3 py-2 rounded-md bg-primary text-white text-sm">Demo</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="p-6 rounded-xl border border-slate-100 dark:border-slate-800 glass shadow hover:shadow-lg transition">
+            <div class="flex items-start gap-4">
+              <img src="https://via.placeholder.com/120x80" alt="Project screenshot" class="w-28 h-20 rounded-md object-cover shadow-sm" />
+              <div>
+                <h3 class="font-semibold text-lg">Realtime Chat & Notifications</h3>
+                <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">A scalable chat service with push notifications and offline sync for mobile and web clients.</p>
+                <div class="mt-3 text-xs text-slate-500 dark:text-slate-400">Tech: WebSockets • Firebase Cloud Messaging • Redis</div>
+
+                <div class="mt-4 flex gap-3">
+                  <a href="#" class="px-3 py-2 rounded-md border text-sm">Case study</a>
+                  <a href="#" class="px-3 py-2 rounded-md bg-primary text-white text-sm">Repo</a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section id="experience" class="max-w-6xl mx-auto px-6 lg:px-8 py-10">
+        <h2 class="text-2xl font-bold">Experience</h2>
+        <div class="mt-6 space-y-6">
+          <div class="p-6 rounded-lg border border-slate-100 dark:border-slate-800 glass">
+            <div class="flex items-start justify-between">
+              <div>
+                <h3 class="font-semibold">Senior Full‑Stack Engineer — Acme Inc.</h3>
+                <p class="text-sm text-slate-500 dark:text-slate-400">Jan 2021 — Present</p>
+                <p class="mt-3 text-sm text-slate-600 dark:text-slate-300">Led a small team to rebuild Acme's consumer platform — delivering a faster frontend, improved test coverage and a microservices migration plan.</p>
+              </div>
+              <div class="text-sm text-slate-500 dark:text-slate-400">Remote</div>
+            </div>
+          </div>
+
+          <div class="p-6 rounded-lg border border-slate-100 dark:border-slate-800 glass">
+            <div class="flex items-start justify-between">
+              <div>
+                <h3 class="font-semibold">Mobile Engineer — BetaTech</h3>
+                <p class="text-sm text-slate-500 dark:text-slate-400">Jun 2018 — Dec 2020</p>
+                <p class="mt-3 text-sm text-slate-600 dark:text-slate-300">Built cross-platform mobile apps with Flutter and integrated with cloud services and CI/CD pipelines.</p>
+              </div>
+              <div class="text-sm text-slate-500 dark:text-slate-400">Bengaluru, India</div>
+            </div>
+          </div>
+
+          <div class="p-6 rounded-lg border border-slate-100 dark:border-slate-800 glass">
+            <div class="flex items-start justify-between">
+              <div>
+                <h3 class="font-semibold">Embedded Systems Intern — Maker Lab</h3>
+                <p class="text-sm text-slate-500 dark:text-slate-400">May 2016 — May 2017</p>
+                <p class="mt-3 text-sm text-slate-600 dark:text-slate-300">Prototyped sensor-driven boards using ESP32 and AVR microcontrollers. Wrote firmware in C/C++ and assisted with PCB layout.</p>
+              </div>
+              <div class="text-sm text-slate-500 dark:text-slate-400">Kochi, India</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EDUCATION & CERTS -->
+      <section id="education" class="max-w-6xl mx-auto px-6 lg:px-8 py-10">
+        <h2 class="text-2xl font-bold">Education & Certifications</h2>
+        <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="p-6 rounded-lg glass border border-slate-100 dark:border-slate-800">
+            <h3 class="font-semibold">B.Tech — Electronics & Communication</h3>
+            <p class="text-sm text-slate-500 dark:text-slate-400">University of XYZ — 2013 — 2017</p>
+          </div>
+
+          <div class="p-6 rounded-lg glass border border-slate-100 dark:border-slate-800">
+            <h3 class="font-semibold">Certifications</h3>
+            <ul class="mt-3 text-sm text-slate-600 dark:text-slate-300 space-y-2">
+              <li>Flutter & Dart — Advanced</li>
+              <li>React — Professional</li>
+              <li>Google Cloud — Associate</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS -->
+      <section id="testimonials" class="max-w-6xl mx-auto px-6 lg:px-8 py-10">
+        <h2 class="text-2xl font-bold">Testimonials</h2>
+        <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <blockquote class="p-4 rounded-lg glass border border-slate-100 dark:border-slate-800">
+            <p class="text-sm text-slate-600 dark:text-slate-300">"Nihan delivered a high-quality product under tight deadlines and was a pleasure to work with."</p>
+            <cite class="block mt-3 text-xs text-slate-500">— Jane Doe, Product Manager</cite>
+          </blockquote>
+
+          <blockquote class="p-4 rounded-lg glass border border-slate-100 dark:border-slate-800">
+            <p class="text-sm text-slate-600 dark:text-slate-300">"Excellent engineering and great communication — strong attention to detail."</p>
+            <cite class="block mt-3 text-xs text-slate-500">— John Smith, CTO</cite>
+          </blockquote>
+
+          <blockquote class="p-4 rounded-lg glass border border-slate-100 dark:border-slate-800">
+            <p class="text-sm text-slate-600 dark:text-slate-300">"Helped scale our backend and improve release velocity significantly."</p>
+            <cite class="block mt-3 text-xs text-slate-500">— Priya K, Engineering Lead</cite>
+          </blockquote>
+        </div>
+      </section>
+
+      <!-- BLOG PREVIEW -->
+      <section id="blog" class="max-w-6xl mx-auto px-6 lg:px-8 py-10">
+        <div class="flex items-center justify-between">
+          <h2 class="text-2xl font-bold">Articles & Notes</h2>
+          <a href="#" class="text-sm underline">Read all posts</a>
+        </div>
+        <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <article class="p-4 rounded-lg glass border border-slate-100 dark:border-slate-800">
+            <h3 class="font-semibold">Performance tuning in Flutter</h3>
+            <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Practical tips to reduce jank and keep 60/120 FPS in demanding UIs.</p>
+          </article>
+
+          <article class="p-4 rounded-lg glass border border-slate-100 dark:border-slate-800">
+            <h3 class="font-semibold">Designing APIs for scale</h3>
+            <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">How to design stable and evolvable REST & GraphQL APIs with backward compatibility.</p>
+          </article>
+
+          <article class="p-4 rounded-lg glass border border-slate-100 dark:border-slate-800">
+            <h3 class="font-semibold">Embedded prototyping on a budget</h3>
+            <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">From breadboard to PCB: my workflow for shipping IoT prototypes quickly.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="max-w-6xl mx-auto px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div>
+            <h2 class="text-2xl font-bold">Let's build something great</h2>
+            <p class="mt-3 text-slate-600 dark:text-slate-300">I'm available for freelance and full-time roles. Tell me about your project and I'll get back within 24 hours.</p>
+
+            <div class="mt-6 space-y-4">
+              <div class="p-4 rounded-lg glass border border-slate-100 dark:border-slate-800">
+                <div class="text-sm text-slate-400">Email</div>
+                <div class="font-medium">nihan@example.com</div>
+              </div>
+
+              <div class="p-4 rounded-lg glass border border-slate-100 dark:border-slate-800">
+                <div class="text-sm text-slate-400">Phone</div>
+                <div class="font-medium">+91 9XXXXXXXXX</div>
+              </div>
+
+              <div class="p-4 rounded-lg glass border border-slate-100 dark:border-slate-800">
+                <div class="text-sm text-slate-400">Location</div>
+                <div class="font-medium">India (IST)</div>
+              </div>
+            </div>
+
+            <div class="mt-6 flex gap-3">
+              <a href="#" class="px-4 py-2 rounded-md bg-primary text-white">Invite to job</a>
+              <a href="mailto:nihan@example.com" class="px-4 py-2 rounded-md border">Email me</a>
+            </div>
+          </div>
+
+          <form class="p-6 rounded-lg glass border border-slate-100 dark:border-slate-800" action="#" onsubmit="alert('Form submitted (demo)'); return false;">
+            <label class="block text-sm font-medium">Your name</label>
+            <input class="mt-2 w-full p-3 rounded-md border border-slate-200 dark:border-slate-700 bg-transparent" required />
+
+            <label class="block text-sm font-medium mt-4">Email</label>
+            <input type="email" class="mt-2 w-full p-3 rounded-md border border-slate-200 dark:border-slate-700 bg-transparent" required />
+
+            <label class="block text-sm font-medium mt-4">Message</label>
+            <textarea class="mt-2 w-full p-3 rounded-md border border-slate-200 dark:border-slate-700 bg-transparent" rows="5" required></textarea>
+
+            <div class="mt-4 flex justify-end">
+              <button type="submit" class="px-4 py-2 rounded-md bg-accent text-white">Send message</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="border-t border-slate-200 dark:border-slate-700 mt-8">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
+          <div class="text-sm text-slate-600 dark:text-slate-400">© <span id="year"></span> Nihan Ali VP — Built with Tailwind CSS</div>
+          <div class="flex items-center gap-3">
+            <a href="#" class="text-sm hover:underline">Privacy</a>
+            <a href="#" class="text-sm hover:underline">Terms</a>
+            <a href="#" class="text-sm hover:underline">Report</a>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    // Theme toggle
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    function setDark(dark){
+      if(dark){
+        document.documentElement.classList.add('dark');
+        themeIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />';
+      } else {
+        document.documentElement.classList.remove('dark');
+        themeIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v2m0 14v2m9-9h-2M5 12H3m15.364-6.364l-1.414 1.414M7.05 16.95l-1.414 1.414M16.95 16.95l1.414 1.414M7.05 7.05L5.636 5.636" />';
+      }
+    }
+    // initialize from localStorage
+    const prefersDark = localStorage.getItem('theme') === 'dark' || window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    setDark(prefersDark);
+    themeToggle.addEventListener('click', ()=>{
+      const isDark = document.documentElement.classList.toggle('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      setDark(isDark);
+    });
+
+    // mobile menu toggle
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileBtn && mobileBtn.addEventListener('click', ()=> mobileMenu.classList.toggle('hidden'));
+
+    // set year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Smooth scrolling for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', function(e){
+        const target = document.querySelector(this.getAttribute('href'));
+        if(target){ e.preventDefault(); target.scrollIntoView({behavior:'smooth'}); }
+      });
+    });
+  </script>
+</body>
+</html>
